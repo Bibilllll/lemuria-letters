@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surat untuk Anak Lemuria</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffffcc;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    button {
+      border: none;
+      background: #d1d5db;
+      color: #111;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 15px;
+    }
+    button:hover {
+      background: #9ca3af;
+      color: white;
+    }
+    .card {
+      background: #f9fafb;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 0.4s ease;
+    }
+    .back {
+      background: #e5e7eb;
+      color: #333;
+      margin-top: 15px;
+    }
+    .back:hover {
+      background: #9ca3af;
+      color: white;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📜 Surat untuk Anak Lemuria</h1>
+    <div id="list" class="grid"></div>
+    <div id="surat" style="display:none;"></div>
+  </div>
+
+  <script>
+    const data = {
+      "Iqy": "Hai Iqy 🤍\nTerima kasih sudah hadir dengan ketulusanmu. Kamu punya hati yang tenang dan pemikiran yang dalam — teruslah menjadi pribadi yang lembut tapi kuat, karena dunia butuh orang sepertimu.",
+      "Ferdy": "Halo Ferdy 🌿\nKetekunanmu adalah hal yang menular. Jangan pernah ragu untuk menunjukkan siapa dirimu — versi terbaikmu sedang tumbuh di setiap langkah kecil yang kamu ambil.",
+      "Haikal": "Hai Haikal ☀️\nKamu punya aura semangat yang menenangkan. Terus gunakan energi itu untuk menebar kebaikan dan keberanian. Kamu bisa lebih dari yang kamu kira.",
+      "Baim": "Halo Baim 💬\nSenyummu dan cara kamu membawa suasana adalah hal yang berharga. Jadilah cahaya kecil di sekitar — karena cahaya kecil pun bisa menerangi banyak hati.",
+      "Raye": "Hai Raye 🌸\nKelembutan dan kedisiplinanmu adalah kombinasi langka. Dunia butuh sosok seperti kamu — yang berani tetap lembut di tengah kerasnya keadaan.",
+      "Marwa": "Hai Marwa 🤍\nKamu punya ketenangan yang menular. Saat dunia terasa bising, kehadiranmu seperti jeda yang menenangkan. Teruslah jadi ruang aman bagi orang-orang di sekitarmu.",
+      "Zara": "Halo Zara 🌼\nKamu penuh cahaya dan ide. Jangan takut bersuara — karena apa yang kamu rasakan dan pikirkan layak untuk didengar. Dunia akan menghargainya.",
+      "Zachwa": "Hai Zachwa 🌙\nKamu punya cara berpikir yang indah dan penuh makna. Teruslah mencintai proses, karena setiap hal kecil yang kamu lakukan hari ini adalah pijakan menuju besar nanti.",
+      "Vina": "Halo Vina 🌻\nKelembutanmu adalah kekuatan. Jangan biarkan siapa pun membuatmu ragu akan nilai dirimu — kamu berharga, bahkan dalam diam yang sederhana.",
+      "Hani": "Hai Hani 🍃\nKamu punya kehangatan yang bisa dirasakan siapa pun. Dunia lebih indah karena ada orang seperti kamu — yang tulus, lembut, dan penuh empati.",
+      "Yemima": "Halo Yemima 💫\nKamu bijak dengan cara yang tenang. Jangan takut melangkah — keberanianmu sedang tumbuh diam-diam, dan kelak akan bersinar saat waktunya tiba.",
+      "Iseh": "Hai Iseh 🌷\nKamu punya pesona yang unik dan cara berpikir yang jujur. Teruslah berjalan dengan hati — karena langkah yang jujur selalu sampai ke tempat yang benar.",
+      "Kayla": "Hai Kayla 🌤️\nKamu cerah seperti pagi hari. Bawalah kehangatan itu ke mana pun kamu pergi. Kamu tidak harus sempurna — cukup jadi kamu yang penuh kasih.",
+      "Nafees": "Halo Nafees 🌾\nKamu punya kedewasaan dan empati yang jarang. Teruslah jadi versi terbaik dari dirimu — yang tidak hanya kuat, tapi juga tahu kapan harus lembut."
+    };
+
+    const listDiv = document.getElementById('list');
+    const suratDiv = document.getElementById('surat');
+
+    Object.keys(data).forEach(nama => {
+      const btn = document.createElement('button');
+      btn.textContent = nama;
+      btn.onclick = () => showLetter(nama);
+      listDiv.appendChild(btn);
+    });
+
+    function showLetter(nama) {
+      listDiv.style.display = 'none';
+      suratDiv.style.display = 'block';
+      suratDiv.innerHTML = `
+        <div class="card">
+          <h2>Untuk: ${nama}</h2>
+          <p style="white-space: pre-line;">${data[nama]}</p>
+          <button class="back" onclick="goBack()">Kembali</button>
+        </div>
+      `;
+    }
+
+    function goBack() {
+      suratDiv.style.display = 'none';
+      listDiv.style.display = 'grid';
+    }
+  </script>
+</body>
+</html>
+
