@@ -69,56 +69,140 @@
 </head>
 <body>
   <div class="container">
-    <h1>📜 Surat untuk Anak Lemuria</h1>
+    <h1> 💌 LEMURIAAAAA 🩶✨ </h1>
     <div id="list" class="grid"></div>
     <div id="surat" style="display:none;"></div>
   </div>
 
   <script>
     const data = {
-      "Iqy": "Hai Iqy 🤍\nTerima kasih sudah hadir dengan ketulusanmu. Kamu punya hati yang tenang dan pemikiran yang dalam — teruslah menjadi pribadi yang lembut tapi kuat, karena dunia butuh orang sepertimu.",
-      "Ferdy": "Halo Ferdy 🌿\nKetekunanmu adalah hal yang menular. Jangan pernah ragu untuk menunjukkan siapa dirimu — versi terbaikmu sedang tumbuh di setiap langkah kecil yang kamu ambil.",
-      "Haikal": "Hai Haikal ☀️\nKamu punya aura semangat yang menenangkan. Terus gunakan energi itu untuk menebar kebaikan dan keberanian. Kamu bisa lebih dari yang kamu kira.",
-      "Baim": "Halo Baim 💬\nSenyummu dan cara kamu membawa suasana adalah hal yang berharga. Jadilah cahaya kecil di sekitar — karena cahaya kecil pun bisa menerangi banyak hati.",
-      "Raye": "Hai Raye 🌸\nKelembutan dan kedisiplinanmu adalah kombinasi langka. Dunia butuh sosok seperti kamu — yang berani tetap lembut di tengah kerasnya keadaan.",
-      "Marwa": "Hai Marwa 🤍\nKamu punya ketenangan yang menular. Saat dunia terasa bising, kehadiranmu seperti jeda yang menenangkan. Teruslah jadi ruang aman bagi orang-orang di sekitarmu.",
-      "Zara": "Halo Zara 🌼\nKamu penuh cahaya dan ide. Jangan takut bersuara — karena apa yang kamu rasakan dan pikirkan layak untuk didengar. Dunia akan menghargainya.",
-      "Zachwa": "Hai Zachwa 🌙\nKamu punya cara berpikir yang indah dan penuh makna. Teruslah mencintai proses, karena setiap hal kecil yang kamu lakukan hari ini adalah pijakan menuju besar nanti.",
-      "Vina": "Halo Vina 🌻\nKelembutanmu adalah kekuatan. Jangan biarkan siapa pun membuatmu ragu akan nilai dirimu — kamu berharga, bahkan dalam diam yang sederhana.",
-      "Hani": "Hai Hani 🍃\nKamu punya kehangatan yang bisa dirasakan siapa pun. Dunia lebih indah karena ada orang seperti kamu — yang tulus, lembut, dan penuh empati.",
-      "Yemima": "Halo Yemima 💫\nKamu bijak dengan cara yang tenang. Jangan takut melangkah — keberanianmu sedang tumbuh diam-diam, dan kelak akan bersinar saat waktunya tiba.",
-      "Iseh": "Hai Iseh 🌷\nKamu punya pesona yang unik dan cara berpikir yang jujur. Teruslah berjalan dengan hati — karena langkah yang jujur selalu sampai ke tempat yang benar.",
-      "Kayla": "Hai Kayla 🌤️\nKamu cerah seperti pagi hari. Bawalah kehangatan itu ke mana pun kamu pergi. Kamu tidak harus sempurna — cukup jadi kamu yang penuh kasih.",
-      "Nafees": "Halo Nafees 🌾\nKamu punya kedewasaan dan empati yang jarang. Teruslah jadi versi terbaik dari dirimu — yang tidak hanya kuat, tapi juga tahu kapan harus lembut."
-    };
+    "Iqy": `
+      <h3>HAII IQYYYY 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Makasih udah selalu aktif, ketuaa💪</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
 
-    const listDiv = document.getElementById('list');
-    const suratDiv = document.getElementById('surat');
+    "Ferdy": `
+      <h3>HALOOO FERDYYY 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Ciee jadi VPO actpro~ sukses yaa!</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
 
-    Object.keys(data).forEach(nama => {
-      const btn = document.createElement('button');
-      btn.textContent = nama;
-      btn.onclick = () => showLetter(nama);
-      listDiv.appendChild(btn);
-    });
+    "Haikal": `
+      <h3>HALOO HAIKALLL 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Jaga dan tingkatin terus semangatnya yaa haikal yaay⚡</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
 
-    function showLetter(nama) {
-      listDiv.style.display = 'none';
-      suratDiv.style.display = 'block';
-      suratDiv.innerHTML = `
-        <div class="card">
-          <h2>Untuk: ${nama}</h2>
-          <p style="white-space: pre-line;">${data[nama]}</p>
-          <button class="back" onclick="goBack()">Kembali</button>
-        </div>
-      `;
-    }
+    "Baim": `
+      <h3>HAIII BAIMMM 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Semangat kejar yang belum selesaii, kalau ada kendala kabarin terus yaaa! Ohiya, jangan izin fasil time terus boimmm</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
 
-    function goBack() {
-      suratDiv.style.display = 'none';
-      listDiv.style.display = 'grid';
-    }
-  </script>
+    "Raye": `
+      <h3>HAAII RAYEEE 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Loveeee rayeee, thank u udah selalu aktif💖</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Marwa": `
+      <h3>HALOO MARWAAA 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Semangat kejar yang belum selesai marwaa, kalau ada kendala berkabar yaa. Thank u udah selalu berkabar💌</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Zara": `
+      <h3>HALOOO ZARAAA 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀</h3>
+      <h3>Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Makasih udah selalu aktif, love love💕</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Zachwa": `
+      <h3>HAII ZACHWAA 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Setiap hari punya kata yang gong terus nih, kata apa ya besok hmmm</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Vina": `
+      <h3>HALOO VINAAA 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>See youu di meet kasuh💖</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Hani": `
+      <h3>HAAII HANIII 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Becil-ku officially graduated😍</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Yemima": `
+      <h3>HALOO YEMIMAAA 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Iacil-ku officially graduated😍</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Iseh": `
+      <h3>HAIII ISEHH 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Thank u yaaaa selalu menginformasikan apapun itu💌</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Kayla": `
+      <h3>HALOOO KAYLAAA 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Ditingkatin terus semangat dan bondingnya sama lemuriaa yaaa ^-^ 💕</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `,
+
+    "Nafees": `
+      <h3>HAIII NAFEESSS 🐾</h3>
+      <h3>SELAMAT SELIMIT UDAH NAMATIN TINHER YEAY!!! 🎉 #LEMURIABANGGA🩶 tinggal TAC-nyaa dilengkapin💀 Semangaat actpro-nya dan dilancarkan selaluu! Jaga terus pin dan gancinya yaa! ✨</h3>
+      <h3>Yaampun gaada yang bisa ngalahin energi Nafees, btw thank u always💖</h3>
+      <h3>Cemangat cemungut jangan sampai sakit, jangan lupa makan minum, jangan lupa istirahat, jangan lupa bikin janji buat meet kasuh🥹</h3>
+    `
+  };
+
+  const listDiv = document.getElementById('list');
+  const suratDiv = document.getElementById('surat');
+
+  Object.keys(data).forEach(nama => {
+    const btn = document.createElement('button');
+    btn.textContent = nama;
+    btn.onclick = () => showLetter(nama);
+    listDiv.appendChild(btn);
+  });
+
+  function showLetter(nama) {
+    listDiv.style.display = 'none';
+    suratDiv.style.display = 'block';
+    suratDiv.innerHTML = `
+      <div class="card">
+        <h2>Untuk: ${nama}</h2>
+        <div>${data[nama]}</div>
+        <button class="back" onclick="goBack()">Kembali</button>
+      </div>
+    `;
+  }
+
+  function goBack() {
+    suratDiv.style.display = 'none';
+    listDiv.style.display = 'grid';
+  }
+</script>
 </body>
 </html>
 
